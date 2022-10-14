@@ -1,0 +1,28 @@
+<template>
+  <div>
+    <h2>Home组件的内容</h2>
+    <div>
+      <ul class="nav nav-tabs">
+        <li>
+          <router-link class="list-group-item" active-class="active" to="/home/news">News</router-link>
+        </li>
+        <li>
+          <router-link class="list-group-item" active-class="active" to="/home/message">Message</router-link>
+        </li>
+      </ul>
+      <!-- 存储的include表示的是组件名，data前边的那个 -->
+      <keep-alive include="News">   
+        <router-view></router-view>
+      </keep-alive>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Home",
+};
+</script>
+
+<style>
+</style>
